@@ -7,5 +7,5 @@ import myDonationRoute from './Router/Route'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={myDonationRoute}></RouterProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )
