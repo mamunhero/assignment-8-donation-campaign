@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import SingleCard from "./SingleCard";
 
 const SingleDonationCard = () => {
 
@@ -14,10 +15,10 @@ const {id} = useParams();
     // console.log(findCard)
     setSingleCard(findCard);
   },[id, donations])
-  console.log(singleCard);
+  // console.log(singleCard);
   return (
     <div>
-      
+      <SingleCard donation={singleCard}></SingleCard>
     </div>
   );
 };
