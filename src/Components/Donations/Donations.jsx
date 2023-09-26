@@ -12,4 +12,3 @@ const Donations = ({donations}) => {
 };
 
 export default Donations;
-

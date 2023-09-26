@@ -125,7 +125,7 @@
       "picture": "https://i.ibb.co/3kTnzpn/Clothing.png",
       "title": "Used Clothing Drive",
       "category": "Clothing",
-      "category_bg": "#79C23F33",
+      " ": "#79C23F33",
       "card_bg": "#79C23F33",
       "text_color": "#79C23F",
       "button_bg": "#e74c3c",
