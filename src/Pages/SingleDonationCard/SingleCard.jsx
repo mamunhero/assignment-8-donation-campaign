@@ -1,3 +1,4 @@
+import swal from "sweetalert";
 
 const SingleCard = ({donation}) => {
   // console.log(donation)
@@ -9,13 +10,38 @@ const SingleCard = ({donation}) => {
   const buttonStyle = {
     backgroundColor: button_bg,
   }
+
+  const handleDonateButton = ()=>{
+    // console.log(donation);
+    const addedDonate = [];
+    const donateButton = JSON.parse(localStorage.getItem("donate")) || [];
+    if (!donateButton) {
+      addedDonate.push(donation);
+      localStorage.setItem("donate", JSON.stringify(addedDonate));
+      swal("Good job!", "SuccessFully Donate Your Money", "success");
+    }
+    else
+      {
+        const isExits = donateButton.find(donation=> donation.id === id);
+        // console.log(isExits);
+        if (!isExits) {
+          addedDonate.push(...donateButton, donation);
+          localStorage.setItem("donate", JSON.stringify(addedDonate));
+          swal("Good job!", "SuccessFully Donate Your Money", "success");
+        }
+        else{
+          swal("Error", "ekber donate kora hoyse", "error");
+        }
+      }
+  }
+
   return (
     <div className="">
       <div className="card w-full">
         <div className="relative">
           <figure><img src={picture} alt="image" className="w-full h-full object-cover"/></figure>
           <div className="absolute top-0% left-0 right-0 bottom-0 bg-black bg-opacity-60 md:py-5 px-5 ">
-            <button className="md:py-3 px-3 text-center text-red-600 text-2xl font-semibold rounded" style={buttonStyle} >Donate $290</button>
+            <button onClick={handleDonateButton} className="md:py-3 px-3 text-center text-red-600 text-2xl font-semibold rounded" style={buttonStyle} >Donate $290</button>
           </div>
         </div>
   <div className="card-body" style={cardStyle}>
