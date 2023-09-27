@@ -1,7 +1,8 @@
+import backgroundImage from "../../../../src/assets/bg-donation"
 const Banner = () => {
   return (
     <div className="mt-10 mb-10">
-      <div className="hero min-h-screen" style={{backgroundImage: 'url(../../../../../../src/assets/bg-donation.jpg)'}}>
+      <div className="hero min-h-screen" style={{backgroundImage}}>
       <div className="hero-overlay bg-opacity-60 bg-[#FFFFFFF2]"></div>
       <div className="hero-content text-center text-neutral-content">
       <div className="">
