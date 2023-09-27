@@ -1,8 +1,8 @@
+import logo from "../../../../src/assets/Logo.png"
 const Logo = () => {
   return (
     <div>
-      <img src="../../../../src/assets/Logo.png
-      " alt="logo-image" className="h-auto" />
+      <img src={logo} alt="logo-image" className="h-auto" />
     </div>
   );
 };
