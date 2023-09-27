@@ -27,8 +27,17 @@ const Donation = () => {
                : donate.slice(0, 4).map(donation=> (<Card key={donation.id} donation={donation}></Card>))
             }
           </div>
-          <button onClick={()=>setIsShow(!isShow)}
-           className={`text-white text-xl bg-green-500 mt-5 text-center block font-semibold py-1 px-5 rounded-xl mx-auto ${isShow ? "hidden" : "block"}`}>See All</button>
+          
+           {donate.length > 4 && (
+            <button
+              onClick={() => setIsShow(!isShow)}
+              className={`text-white text-xl bg-green-500 mt-5 text-center block font-semibold py-1 px-5 rounded-xl mx-auto ${
+                isShow ? "hidden" : "block"
+              }`}
+            >
+              {isShow ? "" : "See More"}
+            </button>
+          )}
         </div>
       }
 

@@ -25,7 +25,7 @@ const myDonationRoute = createBrowserRouter([
        },
        {
         path:"/statistics",
-        element: <Statistics></Statistics>
+        element: <Statistics></Statistics>,
        },
        {
         path:"/donations/:id",
